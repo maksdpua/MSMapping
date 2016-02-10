@@ -1,23 +1,15 @@
 //
-//  MSOne.m
+//  MSOneToMany.m
 //  MSMapping
 //
-//  Created by Maks on 2/6/16.
+//  Created by Maks on 2/9/16.
 //  Copyright © 2016 Maks. All rights reserved.
 //
 
-#import "MSOne.h"
+#import "MSOneToMany.h"
 #import "MSMapper.h"
 
-@implementation MSOne
-
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        self.name = [NSString new];
-    }
-    return self;
-}
+@implementation MSOneToMany
 
 + (id)defaultMapping {
     MSMapper *mapper = [[MSMapper alloc]initWithClass:self.class];

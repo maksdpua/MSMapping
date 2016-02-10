@@ -13,9 +13,11 @@
 + (id)defaultMapping {
     MSMapper *mapper = [[MSMapper alloc]initWithClass:self.class];
     [mapper addAttributesFromDictionary:@{@"model" : @"nameModel", @"color" : @"colorModel"}];
-    [mapper addAttributesFromArray:@[@"number", @"one"]];
+    [mapper addAttributesFromArray:@[@"number", @"one", @"oneToMany"]];
     
-    [mapper addAttributesFromMapping:[MSOne defaultMapping] propertyName:@"one" keyPath:@"www"];
+    [mapper addAttributesOneToOne:[MSOne defaultMapping] propertyName:@"one" keyPath:@"www"];
+//    [mapper addAttributesFromMapping:[MSOneToMany defaultMapping] propertyName:@"oneToMany" keyPath:@"zzz"];
+    [mapper addAttributesOneToMany:[MSOneToMany defaultMapping] propertyName:@"oneToMany" keyPath:@"zzz"];
     return mapper;
 }
 

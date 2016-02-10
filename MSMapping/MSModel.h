@@ -9,6 +9,7 @@
 #import "MSDefaultModel.h"
 #import "MSOne.h"
 #import "MSMapper.h"
+#import "MSOneToMany.h"
 
 @interface MSModel : MSDefaultModel
 
@@ -16,6 +17,7 @@
 @property (nonatomic, strong) NSString *colorModel;
 @property (nonatomic, strong) NSString *number;
 @property (nonatomic, strong) MSOne *one;
+@property (nonatomic, strong) MSOneToMany *oneToMany;
 //@property (nonatomic, strong) NSArray <MSOne *> *oneToMany;
 
 @end

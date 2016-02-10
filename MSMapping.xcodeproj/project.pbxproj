@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D6FE60B1C6A4FDD00C88B71 /* MSOneToMany.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D6FE60A1C6A4FDD00C88B71 /* MSOneToMany.m */; };
 		FC6F5BD11C65DF9E0092B3F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6F5BD01C65DF9E0092B3F7 /* main.m */; };
 		FC6F5BD41C65DF9E0092B3F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6F5BD31C65DF9E0092B3F7 /* AppDelegate.m */; };
 		FC6F5BD71C65DF9E0092B3F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6F5BD61C65DF9E0092B3F7 /* ViewController.m */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D6FE6091C6A4FDD00C88B71 /* MSOneToMany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSOneToMany.h; sourceTree = "<group>"; };
+		2D6FE60A1C6A4FDD00C88B71 /* MSOneToMany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSOneToMany.m; sourceTree = "<group>"; };
 		FC6F5BCC1C65DF9D0092B3F7 /* MSMapping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSMapping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC6F5BD01C65DF9E0092B3F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC6F5BD21C65DF9E0092B3F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -185,6 +188,8 @@
 		FC6F5BFE1C6619D50092B3F7 /* MSOneMany */ = {
 			isa = PBXGroup;
 			children = (
+				2D6FE6091C6A4FDD00C88B71 /* MSOneToMany.h */,
+				2D6FE60A1C6A4FDD00C88B71 /* MSOneToMany.m */,
 			);
 			name = MSOneMany;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 				FC6F5C041C6625870092B3F7 /* MSAttribute.m in Sources */,
 				FC6F5BD41C65DF9E0092B3F7 /* AppDelegate.m in Sources */,
 				FC6F5BFC1C65F4430092B3F7 /* MSDesirializer.m in Sources */,
+				2D6FE60B1C6A4FDD00C88B71 /* MSOneToMany.m in Sources */,
 				FC6F5BD11C65DF9E0092B3F7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

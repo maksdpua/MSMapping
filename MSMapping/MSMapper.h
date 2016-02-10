@@ -15,12 +15,12 @@
 @interface MSMapper : NSObject
 
 @property (nonatomic, strong) NSMutableArray *oneToOne;
+@property (nonatomic, strong) NSMutableArray *oneToMany;
 
 @property (nonatomic, strong) NSMutableArray *attributesArray;
 @property (nonatomic, strong) NSMutableDictionary *attributesDictionary;
 @property (nonatomic, strong) id obj;
-//@property (nonatomic, strong) MSOne *oneToOne;
-//@property (nonatomic, strong) NSMutableArray <MSDefaultModel *> *oneToMany;
+
 
 - (instancetype)initWithClass:(Class)aClass;
 
@@ -28,10 +28,10 @@
 
 - (void)addAttributesFromDictionary:(NSDictionary *)dic;
 
-//- (void)addObjectForAttribute: (MSDefaultModel *)model;
+- (void)addAttributesOneToOne:(MSMapper *)mapper propertyName:(NSString *)propertyName keyPath:(NSString *)keyPath;
 
-//- (void)addOjectsForAttribute: (NSArray <MSDefaultModel *> *) array;
+- (void)addAttributesOneToMany:(MSMapper *)mapper propertyName:(NSString *)propertyName keyPath:(NSString *)keyPath;
 
-- (void)addAttributesFromMapping:(MSMapper *)mapper propertyName:(NSString *)propertyName keyPath:(NSString *)keyPath;
++ (MSMapper *)createNewObjectInMapper:(MSMapper *)mapper;
 
 @end

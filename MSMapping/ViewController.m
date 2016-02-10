@@ -24,7 +24,9 @@
     NSDictionary *dic1 = @{@"model" : @"A1",
                            @"color" : @"red",
                            @"number" : @"1",
-                           @"www" : @{@"name" : @"BBBB"}};
+                           @"www" : @{@"name" : @"BBBB"},
+                           @"zzz" : @[@{@"name" : @"1111"}, @{@"name" : @"2222"}]};
+
     
     MSMapper *objectMap = [MSModel defaultMapping];
     

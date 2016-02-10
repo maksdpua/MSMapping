@@ -14,7 +14,7 @@
     [self setArrayMapping:currentMapping jsonDic:json];
     [self setDictionaryMapping:currentMapping jsonDic:json];
     [self setOneToOneRelationship:currentMapping jsondic:json];
-    
+    [self setOneToManyRelationship:currentMapping jsondic:json];
     
     return currentMapping.obj;
 }
@@ -34,7 +34,19 @@
 
 + (void)setOneToOneRelationship:(MSMapper *)mapper jsondic:(NSDictionary *)dic {
     for (MSAttribute *attribute in mapper.oneToOne) {
-        [mapper.obj setValue:[dic valueForKey: attribute.keyPath] forKey:attribute.propertyName];
+       
+        [mapper.obj setValue:[self deserializeWithJSON:[dic valueForKey: attribute.keyPath] mapping:attribute.mapper] forKey:attribute.propertyName];
+    }
+}
+
++ (void)setOneToManyRelationship:(MSMapper *)mapper jsondic:(NSDictionary *)dic {
+    NSMutableArray *array = [NSMutableArray new];
+    for (MSAttribute *attribute in mapper.oneToMany) {
+        for (NSDictionary *keyPathDic in [dic valueForKey:attribute.keyPath]) {
+            [array addObject:[self deserializeWithJSON:keyPathDic mapping:attribute.mapper]];
+            [MSMapper createNewObjectInMapper:attribute.mapper];
+        }
+        [mapper.obj setValue:array forKey:attribute.propertyName];
     }
 }
 
