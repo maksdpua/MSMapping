@@ -16,7 +16,6 @@
     [mapper addAttributesFromArray:@[@"number", @"one", @"oneToMany"]];
     
     [mapper addAttributesOneToOne:[MSOne defaultMapping] propertyName:@"one" keyPath:@"www"];
-//    [mapper addAttributesFromMapping:[MSOneToMany defaultMapping] propertyName:@"oneToMany" keyPath:@"zzz"];
     [mapper addAttributesOneToMany:[MSOneToMany defaultMapping] propertyName:@"oneToMany" keyPath:@"zzz"];
     return mapper;
 }

@@ -32,6 +32,6 @@
 
 - (void)addAttributesOneToMany:(MSMapper *)mapper propertyName:(NSString *)propertyName keyPath:(NSString *)keyPath;
 
-+ (MSMapper *)createNewObjectInMapper:(MSMapper *)mapper;
++ (void)createNewObjectInMapper:(MSMapper *)mapper;
 
 @end
